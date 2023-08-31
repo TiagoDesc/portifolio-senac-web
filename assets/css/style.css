@@ -2,9 +2,32 @@
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primar-color: #AC5606;
+  --font-default: 'Inter';
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100vh;
+  position: relative;
+  padding-left: 6.8rem;
+  padding-top: 16.8rem;
+  overflow: hidden;
+}
+
+section {
   height: 100vh;
   /*é o 100% da tela, tela cheia*/
   position: absolute;
@@ -12,6 +35,14 @@ header {
   padding-top: 6.5rem;
   overflow: hidden;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section>img {
+  width: 100px;
+  height: 200px;
 }
 
 /*pseudo-elemento*/
@@ -32,21 +63,48 @@ h1 {
   color: #FFF;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
   font-size: 4rem;
-  font-family: 'Inter';
+  font-family: var(--font-default);
   font-weight: 700;
 }
 
 span {
-  color: #AC5606;
+  color: var(--primar-color);
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
   font-size: 2rem;
 }
 
 .botao {
-  background-color: #AC5606;
+
+  background-color: var(--primar-color);
   color: #FFF;
-  font-family: 'Inter';
+  font-family: var(--font-default);
   padding: .25rem 1rem;
   border-radius: 4px;
   text-decoration: none;
+  transition: background-color 1s;
+}
+
+.botao:hover {
+  background-color: #512803;
+}
+
+.secao-apresentacao {
+  display: flex;
+  padding: 6rem;
+  gap: 2rem;
+}
+
+secao-apresentacao img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+}
+
+.secao-apresentacao div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 60%;
 }
